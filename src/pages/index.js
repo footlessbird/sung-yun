@@ -1,16 +1,16 @@
 import React from "react"
 import { Link } from "gatsby"
-import Header from '../components/header'
-import Footer from '../components/footer'
+
+import Layout from "../components/layout"
 
 const Index = () => {
   return (
-    <div>
-      <Header />  
+    <Layout>
       <h2>Keep Going, you're awesome.</h2>
-      <p>Need a developer? <Link to="contact">Contact</Link></p>
-      <Footer />
-    </div>
+      <p>
+        Need a developer? <Link to="contact">Contact</Link>
+      </p>
+    </Layout>
   )
 }
 

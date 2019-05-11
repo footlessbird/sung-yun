@@ -1,12 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
-import Header from "../components/header"
-import Footer from "../components/footer"
+
+import Layout from "../components/layout"
 
 const Contact = () => {
   return (
-    <div>
-      <Header />
+    <Layout>
       <h1>Contact</h1>
       <h2>+1 778 814 1538</h2>
       <small>
@@ -14,8 +12,7 @@ const Contact = () => {
           LinkedIn
         </a>
       </small>
-      <Footer />
-    </div>
+    </Layout>
   )
 }
 
