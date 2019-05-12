@@ -4,7 +4,8 @@ import footerStyles from "./footer.module.scss"
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className={footerStyles.footer}>
+    <small>SUNG-YUN KANG, ©2019</small>
       <ul className={footerStyles.footerList}>
         <li>
           <a
