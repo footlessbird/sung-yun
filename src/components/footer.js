@@ -1,11 +1,11 @@
 import React from "react"
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa"
 
 import footerStyles from "./footer.module.scss"
 
 const Footer = () => {
   return (
     <footer className={footerStyles.footer}>
-    <small>SUNG-YUN KANG, ©2019</small>
       <ul className={footerStyles.footerList}>
         <li>
           <a
@@ -13,7 +13,7 @@ const Footer = () => {
             className={footerStyles.footerItem}
             target="_blank"
           >
-            <i className="fab fa-linkedin" />
+            <FaLinkedin />
           </a>
         </li>
         <li>
@@ -22,7 +22,7 @@ const Footer = () => {
             className={footerStyles.footerItem}
             target="_blank"
           >
-            <i className="fab fa-github-square" />
+            <FaGithubSquare />
           </a>
         </li>
       </ul>

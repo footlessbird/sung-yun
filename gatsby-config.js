@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-      title: `I've started a blog`,
+      title: `Sung-Yun Kang`,
       author: 'SUNG-YUN KANG'
   },
   plugins: [
-      {
+    'gatsby-plugin-react-helmet',  
+    {
           resolve: 'gatsby-source-contentful',
           options: {
               spaceId: process.env.CONTENTFUL_SPACE_ID,
