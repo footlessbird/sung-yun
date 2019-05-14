@@ -2,17 +2,15 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Head from '../components/head'
-
+import Head from "../components/head"
+import indexStyles from './index.module.scss'
 
 const Index = () => {
   return (
     <Layout>
-      <Head title="Home"/>
-      <h2>Keep Going, you're awesome.</h2>
-      <p>
-        Need a developer? <Link to="contact">Contact</Link>
-      </p>
+      <Head title="Home" />
+      <h2 className={indexStyles.title}>The underdog story</h2>
+      <small>Just keep going, you're awesome.</small>
     </Layout>
   )
 }

@@ -42,15 +42,7 @@ const Header = () => {
               <small>BLOG</small>
             </Link>
           </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/about"
-            >
-              <small>ABOUT</small>
-            </Link>
-          </li>
+
           <li>
             <Link
               className={headerStyles.navItem}
@@ -58,6 +50,16 @@ const Header = () => {
               to="/work"
             >
               <small>WORK</small>
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              className={headerStyles.navItem}
+              activeClassName={headerStyles.activeNavItem}
+              to="/contact"
+            >
+              <small>CONTACT</small>
             </Link>
           </li>
         </ul>

@@ -1,5 +1,5 @@
-.title{
-    font-weight: 600
+.title {
+  font-weight: 600;
 }
 
 .posts {
@@ -33,4 +33,18 @@
     color: #777777;
     font-style: italic;
   }
+}
+
+.warning {
+  margin-bottom: 8px;
+}
+
+.description {
+  p:nth-child(1) {
+    margin-bottom: -8px;
+  }
+  p:nth-child(2) {
+    margin-bottom: -8px;
+  }
+
 }
