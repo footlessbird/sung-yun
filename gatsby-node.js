@@ -1,29 +1,60 @@
 const path = require("path")
 
-module.exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  const blogTemplate = path.resolve("./src/templates/blog.js")
-  const res = await graphql(`
-    query {
-      allContentfulBlogPost {
-        edges {
-          node {
-            slug
+
+  const blogTemplate = new Promise((resolve, err) => {
+    graphql(`
+      query {
+        allContentfulBlogPost {
+          edges {
+            node {
+              slug
+            }
           }
         }
       }
-    }
-  `)
-  console.log('line 17')
-  console.log(res)
-  res.data.allContentfulBlogPost.edges.forEach(edge => {
-    createPage({
-      component: blogTemplate,
-      path: `/blog/${edge.node.slug}`,
-      context: {
-        slug: edge.node.slug,
-      },
+    `).then(result => {
+      result.data.allContentfulBlogPost.edges.map(({ node }) => {
+        createPage({
+          path: `blog/${node.slug}/`,
+          component: path.resolve(`./src/templates/blog.js`),
+          context: {
+            slug: node.slug,
+          },
+        })
+      })
+      resolve()
     })
   })
-}
 
+  const workTemplate = new Promise((resolve, err) => {
+    graphql(`
+      query {
+        allContentfulWork {
+          edges {
+            node {
+              name
+              slug
+              body {
+                json
+              }
+            }
+          }
+        }
+      }
+    `).then(result => {
+      result.data.allContentfulWork.edges.map(({ node }) => {
+        createPage({
+          path: `work/${node.slug}/`,
+          component: path.resolve(`./src/templates/work.js`),
+          context: {
+            slug: node.slug,
+          },
+        })
+      })
+      resolve()
+    })
+  })
+  return Promise.all([blogTemplate, workTemplate])
+}
