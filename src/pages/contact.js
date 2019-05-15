@@ -9,7 +9,7 @@ const Contact = () => {
     <Layout>
       <Head title="Contact" />
       <h2>Contact</h2>
-      <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+      <form name="contact" method="POST" data-netlify="true">
         <input name="name" placeholder="Your Name" type="text" />
         <button>Send</button>
       </form>
