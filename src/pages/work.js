@@ -22,7 +22,7 @@ const Work = () => {
   return (
     <Layout>
       <Head title="Work" />
-      <h2 className={workStyles.warning}>Warning</h2>
+      <h2 className={workStyles.warning}>Notice</h2>
       <div className={workStyles.description}>
         <p>
           <small>
@@ -34,7 +34,7 @@ const Work = () => {
           <small>If you want less detail, please check out my git repositories.</small>
         </p>
         <p>
-          <small>Or you might want just simply explore then, click the very first url link from each page below.</small>
+          <small>Or you might want just simply explore then, click the very first url link from the each page below.</small>
         </p>
 
       </div>

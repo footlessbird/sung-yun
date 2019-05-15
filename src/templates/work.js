@@ -20,9 +20,9 @@ const Work = props => {
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
-        const alt = node.data.target.fields.name["en-US"]
+        // const alt = node.data.target.fields.name["en-US"]
         const url = node.data.target.fields.file["en-US"].url
-        return <img alt={alt} src={url} />
+        return <img /*alt={alt}*/ src={url} />
       },
     },
   }
