@@ -12,14 +12,11 @@ const Contact = () => {
       <form
         name="contact"
         method="POST"
-        netlify
         data-netlify="true"
+        data-netlify-recaptcha="true"
       >
-        <p class="hidden">
-          <label>
-            Don’t fill this out if you're human: <input name="bot-field" />
-          </label>
-        </p>
+        <input type="hidden" name="contact" value="contact" />
+
         <p>
           <label>
             Email: <input type="text" name="email" />
