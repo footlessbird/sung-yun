@@ -8,4 +8,4 @@ My CMS site 🌐
 
 * [GatsbyJS](https://www.gatsbyjs.org/)
 * [Contentful](https://www.contentful.com/)
-* [Netlify](hhttps://www.netlify.com/)
+* [Netlify](https://www.netlify.com/)
