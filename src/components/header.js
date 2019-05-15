@@ -53,7 +53,7 @@ const Header = () => {
             </Link>
           </li>
 
-          <li>
+          {/* <li>
             <Link
               className={headerStyles.navItem}
               activeClassName={headerStyles.activeNavItem}
@@ -61,7 +61,7 @@ const Header = () => {
             >
               <small>CONTACT</small>
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>

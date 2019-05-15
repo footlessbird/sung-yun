@@ -8,8 +8,7 @@ const Contact = () => {
   return (
     <Layout>
       <Head title="Contact" />
-      <h2>arslongavitabrevis0818@gmail.com</h2>
-      
+      <h2 />
     </Layout>
   )
 }
